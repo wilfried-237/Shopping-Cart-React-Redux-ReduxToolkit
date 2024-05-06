@@ -1,8 +1,8 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
-import NavBar from "./components/NavBar";
+import Home from "./pages/Home/Home";
+import Cart from "./pages/Cart/Cart";
+import NavBar from "./components/Navbar/NavBar";
 
 function App() {
   return (
