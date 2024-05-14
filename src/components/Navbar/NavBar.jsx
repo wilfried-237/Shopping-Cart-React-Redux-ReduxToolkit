@@ -6,7 +6,7 @@ export default function NavBar() {
     <div className="navbar navbar-expand-sm navbar-dark bg-dark">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to={"/"}>
-          FoodRecipe
+          Shoping Cart React Redux
         </NavLink>
 
         <button

@@ -41,7 +41,7 @@ export default function Home() {
   
 
   return (
-    <div className="">
+    <div className="home d-inline-flex">
       {
         data && data.length>0 ? 
           data.map((item)=> <ShopItem key={item.id} item={item} />)
