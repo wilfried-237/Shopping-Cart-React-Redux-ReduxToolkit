@@ -14,6 +14,7 @@ export default function Home() {
       const response = await fetch("https://fakestoreapi.com/products");
       const getData = await response.json();
 
+
       if(getData){
         setData(getData);
         setLoading(false);
@@ -33,8 +34,6 @@ export default function Home() {
     if(error) return <div>An Error Occured ! {error}</div>
   
     if(loading) return <div className="spinner-border text-primary"></div>
-
-    console.log(data)
   
   
     
