@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import ShopItem from "../../components/ShopItem/ShopItem";
 
-
 export default function Home() {
+
+  
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -30,16 +31,18 @@ export default function Home() {
   useEffect(()=>{
     fetchData();
   }, [])
-
-    if(error) return <div>An Error Occured ! {error}</div>
-  
-    if(loading) return <div className="spinner-border text-primary"></div>
-  
-  
-    
   
 
   return (
+    <>
+    <div className="text-center m-2">Home Page</div>
+    {
+        loading && <div className="w-100"><div className="m-auto"><div className="spinner-border text-primary"></div></div></div>
+      }
+      {
+        error && <div className="text-center">An Error Occured ! {error}</div>
+  
+      }
     <div className="home d-inline-flex">
       {
         data && data.length>0 ? 
@@ -47,5 +50,6 @@ export default function Home() {
         :null
       }
     </div>
+    </>
   )
 }

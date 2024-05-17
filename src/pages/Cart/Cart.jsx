@@ -9,7 +9,7 @@ export default function Cart() {
 
   return (
     <>
-    <div>Cart</div>
+    <div className="text-center m-2">Cart</div>
     <div className="home d-inline-flex">
       {
         cart && cart.length>0 ? 
