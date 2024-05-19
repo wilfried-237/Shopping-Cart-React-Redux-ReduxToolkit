@@ -6,7 +6,7 @@ export default function ShopItem({item}) {
 
   const dispatch = useDispatch()
   const {cart} = useSelector(state => state)
-  let index;
+  
   console.log(item)
 
   useEffect(()=>{
@@ -20,7 +20,7 @@ export default function ShopItem({item}) {
  }
 
  function handleRemoveFromCard(){
-  cart = cart.filter((product)=> product.id == item.id)
+  const cart = cart.filter((product)=> product.id == item.id)
 }
 
 
